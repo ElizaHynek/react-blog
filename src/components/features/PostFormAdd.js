@@ -8,14 +8,14 @@ const PostFormAdd = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const handleAdd = params => {
+  const handleAdd = post => {
     navigate("/");
-    dispatch(addPost(params));
+    dispatch(addPost(post));
   }; 
 
   return (
     <div style={{ width: '70%' }}>
-      <PostForm actionText={'Add post'} action={handleAdd}/>
+      <PostForm actionText="Add post" action={handleAdd}/>
     </div>
     
   );
