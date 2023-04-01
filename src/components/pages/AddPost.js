@@ -1,10 +1,10 @@
-import PostForm from "../features/PostFormAdd";
+import PostFormAdd from "../features/PostFormAdd";
 
 const AddPost = () => {
     return (
       <div>
         <p className="text-center" >AddPost</p>
-        <PostForm />
+        <PostFormAdd />
       </div>
     );
   };

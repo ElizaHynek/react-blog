@@ -1,15 +1,11 @@
-//import { useParams } from "react-router-dom";
-//import { useSelector } from "react-redux";
-//import { getPostById } from "../../redux/postsRedux";
+import PostFormEdit from "../features/PostFormEdit";
 
-const EditPost = props => {
-
-  //const { id } = useParams();
-  //const postData = useSelector(state => getPostById(state, id));
+const EditPost = () => {
 
     return (
       <div>
-        <p>Edit</p> {/* {postData.title} */}
+        <p className="text-center" >EditPost</p>
+        <PostFormEdit />
       </div>
     );
   };
