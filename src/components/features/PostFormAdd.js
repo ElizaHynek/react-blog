@@ -14,7 +14,7 @@ const PostFormAdd = () => {
   }; 
 
   return (
-    <div style={{ width: '70%' }}>
+    <div>
       <PostForm actionText="Add post" action={handleAdd}/>
     </div>
     

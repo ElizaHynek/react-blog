@@ -15,7 +15,7 @@ const PostForm = ({ action, actionText, ...props }) => {
   };
 
   return (
-    <div style={{ width: '70%' }}>
+    <div style={{ width: '70%' }} className="m-auto" >
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-4">
           <Form.Label>Title</Form.Label>
@@ -31,11 +31,11 @@ const PostForm = ({ action, actionText, ...props }) => {
         </Form.Group>
         <Form.Group className="mb-4">
           <Form.Label>Short description</Form.Label>
-          <Form.Control value={shortDescription} onChange={e => setShortDescription(e.target.value)} />
+          <Form.Control as="textarea" style={{ height: '80px' }}value={shortDescription} onChange={e => setShortDescription(e.target.value)} />
         </Form.Group>
         <Form.Group className="mb-4">
           <Form.Label>Content of the post</Form.Label>
-          <Form.Control value={content} onChange={e => setContent(e.target.value)} />
+          <Form.Control as="textarea" style={{ height: '200px' }} value={content} onChange={e => setContent(e.target.value)} />
         </Form.Group>
         <Button variant="primary" type="submit">
           {actionText}
