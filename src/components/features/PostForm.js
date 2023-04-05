@@ -17,6 +17,8 @@ const PostForm = ({ action, actionText, ...props }) => {
   const [content, setContent] = useState(props.content || '');
   const [dateError, setDateError] = useState(false);
   const [contentError, setContentError] = useState(false);
+
+  const [category, setCategory] = useState(props.category || '');
   
 
   const handleSubmit = () => {
@@ -44,6 +46,15 @@ const PostForm = ({ action, actionText, ...props }) => {
           <Form.Label>Published date</Form.Label>
           <DatePicker selected={publishedDate} onChange={(date) => setPublishedDate(date)} />
           {dateError && <small className="d-block form-text text-danger mt-2">Published date can't be empty</small>}
+        </Form.Group>
+        <Form.Group className="mb-4">
+          <Form.Label>Category</Form.Label>
+          <Form.Select aria-label="Default select example" value={category} onChange={e => setCategory(e.target.value)} >
+            <option></option>
+            <option value="sport">Sport</option>
+            <option value="news">News</option>
+            <option value="movies">Movies</option>
+          </Form.Select>
         </Form.Group>
         <Form.Group className="mb-4">
           <Form.Label>Short description</Form.Label>
