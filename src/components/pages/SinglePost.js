@@ -4,6 +4,7 @@ import { getPostById, removePost } from "../../redux/postsRedux";
 import { Button, Modal } from "react-bootstrap";
 import { Link, Navigate } from "react-router-dom";
 import { useState } from "react";
+import { dateToStr } from "../../utils/dateToStr";
 
 const SinglePost = props => {
 
@@ -35,9 +36,10 @@ const SinglePost = props => {
             <Button onClick={handleShow} variant="outline-danger m-1">Delete</Button>
           </div>
         </div>
-        <p><b>Author: </b>{postData.author}
-        <br/><b>Published: </b>{postData.publishedDate}</p>
-        <p>{postData.shortDescription}</p>
+        <p/><b>Author: </b>{postData.author}
+        <br/><b>Published: </b>{postData.publishedDate}
+        <p/>{dateToStr(postData.shortDescription)}
+        <p dangerouslySetInnerHTML={{ __html: postData.content }} />
 
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
