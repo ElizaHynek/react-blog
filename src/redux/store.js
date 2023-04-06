@@ -5,7 +5,7 @@ import categoriesReducer from './categoriesRedux';
 
 const subreducers = {
     posts: postsReducer,
-    categories: categoriesReducer,
+    categories: categoriesReducer
 }
 
 const reducer = combineReducers(subreducers);

@@ -1,6 +1,6 @@
 //selectors
 export const getAllCategories = ({ categories }) => categories;
-export const getFilteredCategories = ({ posts }, id) => posts.filter((post) => post.category === id);
+export const getFilteredCategories = ({ posts }, category) => posts.filter((post) => post.category === category);
 
 // actions
 const createActionName = actionName => `app/posts/${actionName}`;
