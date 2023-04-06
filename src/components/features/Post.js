@@ -1,12 +1,9 @@
 import { Card, Button, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { dateToStr } from "../../utils/dateToStr";
-import { getAllCategories } from "../../redux/categoriesRedux";
-import { useSelector } from "react-redux";
+
 
 const Post = props => {
-
-  //const categories = useSelector(getAllCategories);
 
   return (
     <Col className="py-4 col-4 col-md-4">
