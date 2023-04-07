@@ -14,7 +14,7 @@ import SingleCategory from './components/features/SingleCategory'
 const App = () => {
   return (
     <div>
-      <Container className="container">
+      <Container>
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
