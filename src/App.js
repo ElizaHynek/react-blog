@@ -23,7 +23,7 @@ const App = () => {
           <Route path="/post/:id" element={<SinglePost />} />
           <Route path="/post/add" element={<AddPost />} />
           <Route path="/post/edit/:id" element={<EditPost />} />
-          <Route path="/post/categories/:category" element={<SingleCategory />} />
+          <Route path="/categories/:category" element={<SingleCategory />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
